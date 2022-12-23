@@ -1,10 +1,13 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App'
-import './index.css'
+import ReactDOM from 'react-dom';
+import { Suspense } from 'react';
+import { App } from './App';
+import './styles.css';
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+ReactDOM.render(
+  <>
+    <Suspense fallback={null}>
+      <App />
+    </Suspense>
+  </>,
+  document.getElementById('root')
+);

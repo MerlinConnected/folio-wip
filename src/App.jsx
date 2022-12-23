@@ -1,34 +1,86 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import * as THREE from 'three';
+import { Canvas, useFrame, useThree } from '@react-three/fiber';
+import { Physics, useSphere } from '@react-three/cannon';
+import { AsciiRenderer } from '@react-three/drei';
 
-function App() {
-  const [count, setCount] = useState(0)
+const rfs = THREE.MathUtils.randFloatSpread;
+const sphereGeometry = new THREE.SphereGeometry(1, 24, 24);
+const baubleMaterial = new THREE.MeshStandardMaterial({
+  color: 'green',
+  roughness: 0
+});
 
+export const App = () => (
+  <Canvas
+    shadows
+    dpr={[1, 2]}
+    camera={{ position: [0, 0, 20], fov: 35, near: 1, far: 40 }}
+  >
+    <color attach='background' args={['black']} />
+    <directionalLight intensity={1} position={[-10, -10, -10]} />
+    <directionalLight intensity={5} position={[10, 10, 10]} />
+    <Physics gravity={[0, 2, 0]} iterations={10}>
+      <Pointer />
+      <Clump />
+    </Physics>
+    <AsciiRenderer bgColor='black' fgColor='white' />
+  </Canvas>
+);
+
+function Clump({
+  mat = new THREE.Matrix4(),
+  vec = new THREE.Vector3(),
+  ...props
+}) {
+  const [ref, api] = useSphere(() => ({
+    args: [1],
+    mass: 1,
+    angularDamping: 0.1,
+    linearDamping: 0.65,
+    position: [rfs(20), rfs(20), rfs(20)]
+  }));
+  useFrame((state) => {
+    for (let i = 0; i < 10; i++) {
+      // Get current whereabouts of the instanced sphere
+      ref.current.getMatrixAt(i, mat);
+      // Normalize the position and multiply by a negative force.
+      // This is enough to drive it towards the center-point.
+      api
+        .at(i)
+        .applyForce(
+          vec
+            .setFromMatrixPosition(mat)
+            .normalize()
+            .multiplyScalar(-50)
+            .toArray(),
+          [0, 0, 0]
+        );
+    }
+  });
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
-  )
+    <instancedMesh
+      ref={ref}
+      castShadow
+      receiveShadow
+      args={[null, null, 10]}
+      geometry={sphereGeometry}
+      material={baubleMaterial}
+    />
+  );
 }
 
-export default App
+function Pointer() {
+  const viewport = useThree((state) => state.viewport);
+  const [, api] = useSphere(() => ({
+    type: 'Kinematic',
+    args: [3],
+    position: [0, 0, 0]
+  }));
+  return useFrame((state) =>
+    api.position.set(
+      (state.mouse.x * viewport.width) / 2,
+      (state.mouse.y * viewport.height) / 2,
+      0
+    )
+  );
+}

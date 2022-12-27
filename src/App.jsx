@@ -7,7 +7,7 @@ const rfs = THREE.MathUtils.randFloatSpread;
 const sphereGeometry = new THREE.SphereGeometry(1, 24, 24);
 const baubleMaterial = new THREE.MeshStandardMaterial({
   color: 'green',
-  roughness: 0
+  roughness: 1
 });
 
 export const App = () => (
@@ -17,8 +17,8 @@ export const App = () => (
     camera={{ position: [0, 0, 20], fov: 35, near: 1, far: 40 }}
   >
     <color attach='background' args={['black']} />
-    <directionalLight intensity={1} position={[-10, -10, -10]} />
-    <directionalLight intensity={5} position={[10, 10, 10]} />
+    <directionalLight intensity={0.3} position={[-10, -10, 5]} />
+    <directionalLight intensity={4} position={[10, 10, 10]} />
     <Physics gravity={[0, 2, 0]} iterations={10}>
       <Pointer />
       <Clump />
@@ -51,7 +51,7 @@ function Clump({
           vec
             .setFromMatrixPosition(mat)
             .normalize()
-            .multiplyScalar(-50)
+            .multiplyScalar(-40)
             .toArray(),
           [0, 0, 0]
         );

@@ -8,7 +8,7 @@ ReactDOM.render(
     <Suspense fallback={null}>
       <App />
       <main>
-        <div class='header'>
+        <header>
           <h1>©MERLIN</h1>
           <svg
             width='15'
@@ -25,13 +25,23 @@ ReactDOM.render(
             />
           </svg>
           <nav>
-            <a href='#'>ABOUT</a>
-            <a href='#'>INFO</a>
+            <a href='#'>WIP</a>
           </nav>
-        </div>
-        <div className='wip'>
-          <p>Work in progress</p>
-        </div>
+        </header>
+        <section>
+          <div className='description-container'>
+            <p>
+              <span>hello</span> i'm <span>Gaëtan Jestin.</span> <em>Today</em>,
+              I'm a 3D
+              <span> Artist.</span>
+            </p>
+            <p class='bottom-margin'>
+              <em>Tomorrow</em> I'll be a <span>creative developer.</span> I
+              want to <span>mix</span> both and create <em>awesome things.</em>
+              <span> Hopefully</span> working <em>w/ you</em> in a near future.
+            </p>
+          </div>
+        </section>
       </main>
     </Suspense>
   </>,

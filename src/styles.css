@@ -95,7 +95,6 @@ p {
   text-align: justify;
   pointer-events: none;
   text-indent: 100px;
-  mix-blend-mode: difference;
 }
 
 .bottom-margin {

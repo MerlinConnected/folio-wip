@@ -25,20 +25,28 @@ ReactDOM.render(
             />
           </svg>
           <nav>
-            <a href='#'>WIP</a>
+            <div class='menu-item'>
+              <div class='menu-item-text-container'>
+                <span class='menu-item-text'>WIP</span>
+              </div>
+            </div>
           </nav>
         </header>
         <section>
           <div className='description-container'>
             <p>
-              <span>hello</span> i'm <span>Gaëtan Jestin.</span> <em>Today</em>,
-              I'm a 3D
-              <span> Artist.</span>
+              <span class='serif-text'>hello</span> i'm{' '}
+              <span class='serif-text'>Gaëtan Jestin.</span> <em>Today</em>, I'm
+              a 3D
+              <span class='serif-text'> Artist.</span>
             </p>
             <p class='bottom-margin'>
-              <em>Tomorrow</em> I'll be a <span>creative developer.</span> I
-              want to <span>mix</span> both and create <em>awesome things.</em>
-              <span> Hopefully</span> working <em>w/ you</em> in a near future.
+              <em>Tomorrow</em> I'll be a{' '}
+              <span class='serif-text'>creative developer. </span>I want to{' '}
+              <span class='serif-text'>mix</span> both and create{' '}
+              <em>awesome things.</em>
+              <span class='serif-text'> Hopefully</span> working <em>w/ you</em>{' '}
+              in a near future.
             </p>
           </div>
         </section>

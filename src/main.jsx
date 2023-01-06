@@ -9,7 +9,9 @@ ReactDOM.render(
       <App />
       <main>
         <header>
-          <h1>©MERLIN</h1>
+          <h1>
+            ©MER<em class='italic-header'>LIN</em>
+          </h1>
           <svg
             width='15'
             height='15'
@@ -32,24 +34,33 @@ ReactDOM.render(
             </div>
           </nav>
         </header>
-        <section>
-          <div className='description-container'>
-            <p>
-              <span class='serif-text'>hello</span> i'm{' '}
-              <span class='serif-text'>Gaëtan Jestin.</span> <em>Today</em>, I'm
-              a 3D
-              <span class='serif-text'> Artist.</span>
-            </p>
-            <p class='bottom-margin'>
-              <em>Tomorrow</em> I'll be a{' '}
-              <span class='serif-text'>creative developer. </span>I want to{' '}
-              <span class='serif-text'>mix</span> both and create{' '}
-              <em>awesome things.</em>
-              <span class='serif-text'> Hopefully</span> working <em>w/ you</em>{' '}
-              in a near future.
-            </p>
-          </div>
-        </section>
+        <div class='description-container'>
+          <p>
+            <span class='serif-text'>hello</span> i'm{' '}
+            <span class='serif-text'>Gaëtan Jestin.</span> <em>Today</em>, I'm a
+            3D
+            <span class='serif-text'> Artist.</span>
+          </p>
+          <p class='bottom-margin'>
+            <em>Tomorrow</em> I'll be a{' '}
+            <span class='serif-text'>creative developer. </span>I want to{' '}
+            <span class='serif-text'>mix</span> both and create{' '}
+            <em>awesome things.</em>
+            <span class='serif-text'> Hopefully</span> working <em>w/ you</em>{' '}
+            in a near future.
+          </p>
+        </div>
+        <div class='footer'>
+          <a
+            href='https://www.linkedin.com/in/gaetan-jestin/'
+            className='socials'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
+            {' '}
+            {'->'}Linked<em class='italic-footer'>In</em>
+          </a>
+        </div>
       </main>
     </Suspense>
   </>,

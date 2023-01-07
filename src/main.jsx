@@ -57,8 +57,7 @@ ReactDOM.render(
             target='_blank'
             rel='noopener noreferrer'
           >
-            {' '}
-            {'->'}Linked<em class='italic-footer'>In</em>
+            {'->'}Linke<em class='italic-footer'>dIn</em>
           </a>
         </div>
       </main>

@@ -128,7 +128,6 @@ nav {
 
 .description-container {
   display: flex;
-  /* align-items: flex-end; */
   justify-content: flex-end;
   flex-direction: column;
   bottom: 0;
@@ -140,6 +139,8 @@ nav {
 }
 
 .footer {
+  display: flex;
+  flex-direction: column;
   bottom: 0;
   right: 0;
   position: absolute;
@@ -149,9 +150,11 @@ nav {
   text-decoration: none;
 }
 
-a {
+.socials {
   color: #f1f1f1;
   text-decoration: none;
+  font-weight: 300;
+  padding-top: 5px;
 }
 
 .italic-footer {
@@ -184,10 +187,10 @@ em {
   font-size: 2.7rem;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1400px) {
   p {
     font-size: 2rem;
-    width: 400px;
+    width: 500px;
   }
   em {
     font-size: 2rem;
@@ -197,10 +200,24 @@ em {
   }
 }
 
+@media screen and (max-width: 1150px) {
+  p {
+    font-size: 1.9rem;
+    width: 400px;
+  }
+  em {
+    font-size: 1.9rem;
+  }
+  .serif-text {
+    font-size: 1.9rem;
+  }
+}
+
 @media screen and (max-width: 900px) {
   p {
     font-size: 1.5rem;
     width: 300px;
+    text-indent: 100px;
   }
   em {
     font-size: 1.5rem;

@@ -71,6 +71,7 @@ h1 {
 .menu-item-text-container {
   display: flex;
   justify-content: flex-end;
+  transform: translateY(50%);
 }
 
 .menu-item {

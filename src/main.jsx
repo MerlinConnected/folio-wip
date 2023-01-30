@@ -7,6 +7,7 @@ ReactDOM.render(
   <>
     <Suspense fallback={null}>
       <App />
+      <div id='pointer'>*</div>
       <main>
         <header>
           <h1>
@@ -57,7 +58,7 @@ ReactDOM.render(
             target='_blank'
             rel='noopener noreferrer'
           >
-            {'->'}Linke<em class='italic-footer'>dIn</em>
+            {'->'}Linked<em class='italic-footer'>In</em>
           </a>
         </div>
       </main>

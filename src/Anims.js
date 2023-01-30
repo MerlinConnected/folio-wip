@@ -1,3 +1,5 @@
+import { TriangleStripDrawMode } from 'three';
+
 const menuItems = [...document.querySelectorAll('.menu-item')];
 
 menuItems.forEach((item) => {
@@ -14,3 +16,20 @@ menuItems.forEach((item) => {
   cloneDiv.style.position = 'relative';
   item.appendChild(cloneDiv);
 });
+
+const pointer = document.getElementById('pointer');
+
+window.onmousemove = (e) => {
+  const x = e.clientX - pointer.offsetWidth / 2,
+    y = e.clientY - pointer.offsetHeight / 2;
+
+  const keyframes = {
+    transform: `translate(${x}px, ${y}px)`
+  };
+
+  pointer.animate(keyframes, {
+    duration: 200,
+    easing: 'ease-in-out',
+    fill: 'forwards'
+  });
+};

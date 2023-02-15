@@ -3,10 +3,12 @@
 @font-face {
   font-family: 'Reckless Neue';
   src: url('./fonts/RecklessNeue-Thin.ttf') format('truetype');
+  font-display: swap;
 }
 @font-face {
   font-family: 'Reckless Neue Italic';
   src: url('./fonts/RecklessNeue-ThinItalic.ttf') format('truetype');
+  font-display: swap;
 }
 
 html,

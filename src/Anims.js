@@ -28,7 +28,7 @@ window.onmousemove = (e) => {
   };
 
   pointer.animate(keyframes, {
-    duration: 200,
+    duration: 100,
     easing: 'ease-in-out',
     fill: 'forwards'
   });

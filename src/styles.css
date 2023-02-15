@@ -79,7 +79,6 @@ h1 {
 .menu-item {
   position: relative;
   text-transform: uppercase;
-  cursor: progress;
   text-decoration: none;
   color: #f1f1f1;
   font-size: 1rem;

@@ -7,6 +7,7 @@ ReactDOM.render(
   <>
     <Suspense fallback={null}>
       <App />
+      <span id='pointer'>*</span>
       <main>
         <header>
           <h1>
@@ -39,7 +40,7 @@ ReactDOM.render(
             <span class='serif-text'>hello</span> i'm{' '}
             <span class='serif-text'>Gaëtan Jestin.</span> <em>Today</em>, I'm a
             3D
-            <span class='serif-text'> Artist.</span>
+            <span class='serif-text'> Artist Based In</span> <em>Bordeaux.</em>
           </p>
           <p class='bottom-margin'>
             <em>Tomorrow</em> I'll be a{' '}
@@ -57,7 +58,7 @@ ReactDOM.render(
             target='_blank'
             rel='noopener noreferrer'
           >
-            {'->'}Linke<em class='italic-footer'>dIn</em>
+            {'->'}Linked<em class='italic-footer'>In</em>
           </a>
         </div>
       </main>

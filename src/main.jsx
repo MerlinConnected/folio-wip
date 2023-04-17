@@ -22,7 +22,7 @@ ReactDOM.render(
 						/>
 					</svg>
 					<nav>
-						<a href='/Book-Jestin-2023-Majic.pdf' className='socials' target='_blank' rel='noopener noreferrer'>
+						<a href='/Book-Jestin-2023.pdf' className='socials' target='_blank' rel='noopener noreferrer'>
 							{'->'}Bo<em class='italic-footer'>ok</em>
 						</a>
 					</nav>

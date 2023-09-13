@@ -15,7 +15,7 @@ export default function App() {
 				position: [0, 0, 20],
 				fov: 35,
 				near: 1,
-				far: 40,
+				far: 40
 			}}
 		>
 			<color attach='background' args={['black']} />
@@ -36,7 +36,7 @@ function Clump({ mat = new THREE.Matrix4(), vec = new THREE.Vector3() }) {
 		mass: 1,
 		angularDamping: 0.1,
 		linearDamping: 0.65,
-		position: [rfs(20), rfs(20), rfs(20)],
+		position: [rfs(20), rfs(20), rfs(20)]
 	}))
 	useFrame((state) => {
 		for (let i = 0; i < 10; i++) {
@@ -55,13 +55,7 @@ function Clump({ mat = new THREE.Matrix4(), vec = new THREE.Vector3() }) {
 		}
 	})
 	return (
-		<instancedMesh
-			ref={ref}
-			castShadow
-			receiveShadow
-			args={[null, null, 10]}
-			geometry={sphereGeometry}
-		>
+		<instancedMesh ref={ref} castShadow receiveShadow args={[null, null, 10]} geometry={sphereGeometry}>
 			<meshStandardMaterial color='white' />
 		</instancedMesh>
 	)
@@ -72,13 +66,9 @@ function Pointer() {
 	const [, api] = useSphere(() => ({
 		type: 'Kinematic',
 		args: [3],
-		position: [0, 0, 0],
+		position: [0, 0, 0]
 	}))
 	return useFrame((state) =>
-		api.position.set(
-			(state.mouse.x * viewport.width) / 2,
-			(state.mouse.y * viewport.height) / 2,
-			0
-		)
+		api.position.set((state.mouse.x * viewport.width) / 2, (state.mouse.y * viewport.height) / 2, 0)
 	)
 }

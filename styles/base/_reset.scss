@@ -221,6 +221,7 @@ th {
 }
 
 #root {
+	pointer-events: none;
 	> div {
 		&:first-child {
 			position: absolute !important;
@@ -230,6 +231,7 @@ th {
 		&:last-child {
 			position: relative !important;
 			z-index: 1 !important;
+			pointer-events: none;
 		}
 	}
 }

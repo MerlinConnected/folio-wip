@@ -3,6 +3,8 @@ a {
 	font-size: rem(0.95);
 	font-weight: 400;
 	font-feature-settings: 'calt' on;
+
+	color: $color-primary;
 	span {
 		font-size: rem(1);
 	}
@@ -14,12 +16,12 @@ span {
 		font-family: 'Reckless Neue';
 		font-variant-numeric: ordinal;
 		font-feature-settings: 'ss14' on;
-		font-weight: 400;
+		font-weight: 100;
 	}
 	&.ft-alt-it {
 		font-family: 'Reckless Neue Italic';
 		font-variant-numeric: ordinal;
 		font-feature-settings: 'ss14' on;
-		font-weight: 400;
+		font-weight: 100;
 	}
 }

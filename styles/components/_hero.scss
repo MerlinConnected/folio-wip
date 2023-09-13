@@ -1,4 +1,5 @@
 section.hero {
+	pointer-events: none;
 	> div {
 		display: flex;
 		align-items: center;
@@ -8,6 +9,9 @@ section.hero {
 
 		h1 {
 			text-align: center;
+			div {
+				padding-top: rem(4);
+			}
 		}
 	}
 }

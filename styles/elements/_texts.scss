@@ -1,12 +1,15 @@
-p {
-	font-size: rem(0.9);
+p,
+a {
+	font-size: rem(0.95);
 	font-weight: 400;
+	font-feature-settings: 'calt' on;
 	span {
 		font-size: rem(1);
 	}
 }
 
 span {
+	text-transform: uppercase;
 	&.ft-alt {
 		font-family: 'Reckless Neue';
 		font-variant-numeric: ordinal;

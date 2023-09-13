@@ -1,0 +1,17 @@
+h1 {
+	font-size: rem(2.5);
+	font-weight: 200;
+	letter-spacing: rem(-0.2);
+	text-transform: uppercase;
+	line-height: 0.9;
+	@media (min-width: $from-small) {
+		font-size: rem(5);
+		letter-spacing: rem(-0.48);
+	}
+	span {
+		font-size: rem(2.65);
+		@media (min-width: $from-small) {
+			font-size: rem(5.5);
+		}
+	}
+}

@@ -1,4 +1,18 @@
+import { useEffect } from 'react'
+
 export default function hero() {
+	useEffect(() => {
+		const handleScroll = () => {
+			const title = document.querySelector('.hero')
+			title.style.transform = `translateY(-${window.scrollY / 2}px)`
+		}
+
+		window.addEventListener('scroll', handleScroll)
+
+		return () => {
+			window.removeEventListener('scroll', handleScroll)
+		}
+	}, [])
 	return (
 		<section className='hero'>
 			<div>
@@ -9,8 +23,7 @@ export default function hero() {
 					<span className='ft-alt-it'>stuff</span>.
 					<br />
 					<div>
-						<span className='ft-alt'>Paris - </span>
-						<span className='ft-alt-it'>Bordeaux</span>
+						Paris <span className='ft-alt'> &</span> <span className='ft-alt-it'> Bordeaux</span>
 					</div>
 				</h1>
 			</div>

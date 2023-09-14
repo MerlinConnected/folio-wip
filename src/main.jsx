@@ -20,7 +20,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 				<div className='projects-container'>
 					<Projects />
 				</div>
-				<div className='model'>{/* <Scene /> */}</div>
+				<div className='model'>
+					<Scene />
+				</div>
 			</Suspense>
 		</ReactLenis>
 	</React.StrictMode>

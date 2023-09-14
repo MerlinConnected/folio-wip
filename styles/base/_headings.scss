@@ -1,4 +1,5 @@
-h1 {
+h1,
+h2 {
 	font-size: rem(2.5);
 	font-weight: 200;
 	text-transform: uppercase;
@@ -16,5 +17,19 @@ h1 {
 			font-size: rem(5.5);
 			letter-spacing: rem(-0.48);
 		}
+	}
+}
+
+h2 {
+	font-family: 'Reckless Neue Italic';
+	font-variant-numeric: ordinal;
+	font-feature-settings: 'ss14' on;
+	font-weight: 100;
+
+	font-size: rem(2.65);
+	letter-spacing: rem(-0.2);
+	@media (min-width: $from-small) {
+		font-size: rem(7.5);
+		letter-spacing: rem(-0.35);
 	}
 }

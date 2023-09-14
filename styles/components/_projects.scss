@@ -1,0 +1,18 @@
+.projects-container {
+	padding-bottom: rem(10);
+	section.projects {
+		margin: rem(3) 0;
+		> div {
+			&:first-of-type {
+				display: flex;
+				justify-content: center;
+
+				margin: rem(3) 0 rem(8);
+			}
+			&:last-of-type {
+				display: grid;
+				gap: rem(10);
+			}
+		}
+	}
+}

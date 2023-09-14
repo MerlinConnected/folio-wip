@@ -1,0 +1,30 @@
+.project {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	gap: rem(2);
+	> div {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: rem(2);
+		&:last-of-type {
+			width: 85%;
+			justify-content: space-between;
+		}
+		&:hover {
+			img {
+				cursor: pointer;
+			}
+		}
+		img {
+			width: 100%;
+			height: rem(6);
+			border-radius: rem(1);
+
+			transition: 1s ease-in-out;
+			transform-origin: center;
+		}
+	}
+}

@@ -1,10 +1,12 @@
 import { Canvas } from '@react-three/fiber'
 import { Physics } from '@react-three/rapier'
 import { AsciiRenderer } from '@react-three/drei'
+import { EffectComposer, ASCII } from '@react-three/postprocessing'
+import { Perf } from 'r3f-perf'
+import React, { useEffect } from 'react'
+
 import Pointer from './Pointer'
 import Sphere from './Sphere'
-import { Perf } from 'r3f-perf'
-import { useEffect } from 'react'
 
 const spheres = [...Array(10)].map(() => ({ scale: [0.9, 1, 1.1][Math.floor(Math.random() * 3)] }))
 
@@ -21,6 +23,7 @@ export default function Scene() {
 			window.removeEventListener('scroll', handleScroll)
 		}
 	}, [])
+
 	return (
 		<Canvas
 			shadows
@@ -40,7 +43,10 @@ export default function Scene() {
 				))}
 			</Physics>
 			{/* <Perf /> */}
-			<AsciiRenderer bgColor='black' fgColor='white' characters=' .+=@' />
+			<AsciiRenderer bgColor='transparent' fgColor='white' characters=' .+=@' />
+			{/* <EffectComposer>
+				<ASCII characters='.+=#@' fontSize={100} cellSize={30} color='#505050' />
+			</EffectComposer> */}
 		</Canvas>
 	)
 }

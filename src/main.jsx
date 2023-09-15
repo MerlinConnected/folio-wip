@@ -6,7 +6,7 @@ import '../styles/index.scss'
 import Header from '../components/header'
 import Hero from '../components/hero'
 import Nav from '../components/nav'
-import Projects from '../components/projects'
+import Projects from '../components/ProjectsLayout'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
 	<React.StrictMode>

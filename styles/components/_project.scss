@@ -4,27 +4,53 @@
 	flex-direction: column;
 	align-items: center;
 	gap: rem(2);
+
 	> div {
 		display: flex;
-		flex-direction: row;
 		align-items: center;
+		justify-content: center;
+		flex-grow: 1;
+
 		gap: rem(2);
+		&:hover {
+			.image-container {
+				width: rem(10);
+				height: rem(5);
+
+				border-radius: rem(0.5);
+			}
+			img {
+				cursor: pointer;
+
+				transform: scale(1.2);
+			}
+		}
+		.image-container {
+			width: 0%;
+			height: rem(5);
+
+			border-radius: rem(0.1);
+
+			overflow: hidden;
+
+			transition: all 0.5s $slower;
+			img {
+				height: rem(5);
+				width: rem(10);
+
+				object-fit: cover;
+
+				transition: all 1s $slower;
+			}
+		}
+
 		&:last-of-type {
 			width: 85%;
 			justify-content: space-between;
-		}
-		&:hover {
-			img {
-				cursor: pointer;
-			}
-		}
-		img {
-			width: 100%;
-			height: rem(6);
-			border-radius: rem(1);
 
-			transition: 1s ease-in-out;
-			transform-origin: center;
+			div {
+				overflow: hidden;
+			}
 		}
 	}
 }

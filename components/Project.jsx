@@ -1,38 +1,78 @@
+import { useInView } from 'framer-motion'
 import { motion } from 'framer-motion'
-import { useState } from 'react'
+import { useRef } from 'react'
 
 export default function Project({ project }) {
-	const [show, setShow] = useState(false) // Initially, not shown
+	const snappy = { ease: [0.6, 0.01, -0.05, 0.9] }
+	const slower = { ease: [0.43, 0.13, 0.23, 0.96] }
+	const staggerDelay = 0.2
 
-	const snappy = { duration: 0.6, ease: [0.6, 0.01, -0.05, 0.9] }
-	const slower = { duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] }
+	const ref = useRef(null)
 
-	const handleClick = () => {
-		setShow(!show)
+	const isInView = useInView(ref, { once: false })
+
+	const container = {
+		hidden: { opacity: 0 },
+		visible: {
+			opacity: 1,
+			transition: {
+				staggerChildren: staggerDelay
+			}
+		}
+	}
+
+	const subContainer = {
+		hidden: { opacity: 0 },
+		visible: {
+			opacity: 1,
+			transition: {
+				delayChildren: 0.3,
+				staggerChildren: staggerDelay
+			}
+		}
+	}
+
+	const child = {
+		hidden: { y: 100 },
+		visible: { y: 0 }
 	}
 
 	return (
 		<>
 			<div className='container'>
 				<div className='project'>
-					<div>
-						<h2>{project.title1}</h2>
-						<div className={show ? 'image-container active' : 'image-container'}>
-							<motion.img
-								whileHover={{ scale: 1.1 }}
-								transition={slower}
-								onClick={handleClick}
-								src={project.image}
-								alt='project-image'
-							/>
+					<motion.div ref={ref} initial='hidden' animate={isInView ? 'visible' : 'hidden'} variants={container}>
+						<div style={{ overflow: 'hidden' }}>
+							<motion.h2 variants={child} transition={{ ...slower, duration: 0.6 }}>
+								{project.title1}
+							</motion.h2>
 						</div>
-						<h2>{project.title2}</h2>
-					</div>
-					<div>
-						<p>{project.client}</p>
-						<p>{project.type}</p>
-						<p>{project.soft}</p>
-					</div>
+						<div className='image-container'>
+							<img src={project.image} alt='project-image' />
+						</div>
+						<div style={{ overflow: 'hidden' }}>
+							<motion.h2 variants={child} transition={{ ...slower, duration: 0.6 }}>
+								{project.title2}
+							</motion.h2>
+						</div>
+					</motion.div>
+					<motion.div ref={ref} initial='hidden' animate={isInView ? 'visible' : 'hidden'} variants={subContainer}>
+						<div>
+							<motion.p variants={child} transition={{ ...snappy, duration: 0.3 }}>
+								{project.client}
+							</motion.p>
+						</div>
+						<div>
+							<motion.p variants={child} transition={{ ...snappy, duration: 0.3 }}>
+								{project.type}
+							</motion.p>
+						</div>
+						<div>
+							<motion.p variants={child} transition={{ ...snappy, duration: 0.3 }}>
+								{project.soft}
+							</motion.p>
+						</div>
+					</motion.div>
 				</div>
 			</div>
 		</>

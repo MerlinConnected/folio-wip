@@ -7,11 +7,11 @@
 				display: flex;
 				justify-content: center;
 
-				margin: rem(3) 0 rem(8);
+				margin: rem(3) 0 rem(15);
 			}
 			&:last-of-type {
 				display: grid;
-				gap: rem(10);
+				gap: rem(20);
 			}
 		}
 	}

@@ -38,3 +38,5 @@ $from-colossal: 2400px;
 $to-colossal: $from-colossal - 1;
 
 $ease: cubic-bezier(0.165, 0.84, 0.44, 1);
+$snappy: cubic-bezier(0.6, 0.01, 0.05, 0.9);
+$slower: cubic-bezier(0.43, 0.13, 0.23, 0.96);

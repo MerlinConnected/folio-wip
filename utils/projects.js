@@ -11,7 +11,7 @@ export const hangingLights = {
 export const photorealSubway = {
 	title1: 'Photoreal',
 	title2: 'Subway',
-	image: '/images/hanging-lights.png',
+	image: '/images/photoreal-subway.png',
 	year: '2020',
 	client: 'Personal Project',
 	type: '3D',

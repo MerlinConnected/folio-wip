@@ -26,7 +26,7 @@ export default function Project({ project }) {
 		visible: {
 			opacity: 1,
 			transition: {
-				delayChildren: 0.3,
+				delayChildren: 0.1,
 				staggerChildren: staggerDelay
 			}
 		}
@@ -58,17 +58,17 @@ export default function Project({ project }) {
 					</motion.div>
 					<motion.div ref={ref} initial='hidden' animate={isInView ? 'visible' : 'hidden'} variants={subContainer}>
 						<div>
-							<motion.p variants={child} transition={{ ...snappy, duration: 0.3 }}>
+							<motion.p variants={child} transition={{ ...snappy, duration: 0.5 }}>
 								{project.client}
 							</motion.p>
 						</div>
 						<div>
-							<motion.p variants={child} transition={{ ...snappy, duration: 0.3 }}>
+							<motion.p variants={child} transition={{ ...snappy, duration: 0.5 }}>
 								{project.type}
 							</motion.p>
 						</div>
 						<div>
-							<motion.p variants={child} transition={{ ...snappy, duration: 0.3 }}>
+							<motion.p variants={child} transition={{ ...snappy, duration: 0.5 }}>
 								{project.soft}
 							</motion.p>
 						</div>

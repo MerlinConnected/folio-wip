@@ -8,4 +8,9 @@ header {
 	padding: rem(2);
 
 	pointer-events: all;
+	svg {
+		&:hover {
+			cursor: pointer;
+		}
+	}
 }

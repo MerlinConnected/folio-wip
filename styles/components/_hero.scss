@@ -1,16 +1,20 @@
 section.hero {
-	pointer-events: none;
 	> div {
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		flex-direction: column;
 
 		margin: 0 auto;
+		> div {
+			padding-right: rem(1);
 
-		h1 {
-			text-align: center;
-			div {
-				padding-top: rem(4);
+			&:last-child {
+				margin-top: rem(2);
+			}
+			> div {
+				display: inline-block;
+				margin-right: rem(1);
 			}
 		}
 	}

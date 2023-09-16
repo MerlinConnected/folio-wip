@@ -19,7 +19,7 @@ export default function Scene() {
 	useEffect(() => {
 		const handleScroll = () => {
 			const title = document.querySelector('.model')
-			title.style.transform = `translateY(-${window.scrollY / 1}px)`
+			title.style.transform = `translateY(-${window.scrollY / 3}px)`
 		}
 
 		window.addEventListener('scroll', handleScroll)

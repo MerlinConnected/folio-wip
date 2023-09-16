@@ -20,7 +20,7 @@ export default function hero() {
 
 	const ref = useRef(null)
 
-	const isInView = useInView(ref, { once: false })
+	const isInView = useInView(ref, { once: true })
 
 	const container = {
 		hidden: { opacity: 0 },

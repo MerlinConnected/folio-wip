@@ -1,6 +1,5 @@
-import { useInView } from 'framer-motion'
-import { motion } from 'framer-motion'
 import { useRef } from 'react'
+import { useInView, motion } from 'framer-motion'
 
 export default function Project({ project }) {
 	const snappy = { ease: [0.6, 0.01, -0.05, 0.9] }

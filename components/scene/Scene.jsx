@@ -1,9 +1,9 @@
-import { Canvas } from '@react-three/fiber'
+import { Canvas, useFrame } from '@react-three/fiber'
 import { Physics } from '@react-three/rapier'
-import { AsciiRenderer } from '@react-three/drei'
+import { AsciiRenderer, Loader } from '@react-three/drei'
 import { EffectComposer, ASCII } from '@react-three/postprocessing'
 import { Perf } from 'r3f-perf'
-import React, { useEffect } from 'react'
+import React, { useEffect, Suspense } from 'react'
 
 import Pointer from './Pointer'
 import Sphere from './Sphere'
@@ -25,28 +25,31 @@ export default function Scene() {
 	}, [])
 
 	return (
-		<Canvas
-			shadows
-			gl={{ alpha: true, stencil: false, depth: false, antialias: true, powerPreference: 'high-performance' }}
-			camera={{ position: [0, 0, 20], fov: 32.5, near: 1, far: 100 }}
-		>
-			<color attach='background' args={['black']} />
+		<>
+			<Canvas shadows gl={{ alpha: true }} camera={{ position: [0, 0, 20], fov: 32.5, near: 1, far: 100 }}>
+				<color attach='background' args={['black']} />
 
-			<directionalLight intensity={0.3} position={[-10, -10, 5]} />
-			<directionalLight intensity={4} position={[10, 10, 10]} />
+				<directionalLight intensity={0.3} position={[-10, -10, 5]} />
+				<directionalLight intensity={4} position={[10, 10, 10]} />
 
-			<Physics gravity={[0, 0, 0]}>
-				<Pointer />
+				<Physics gravity={[0, 0, 0]}>
+					<Pointer />
 
-				{spheres.map((props, i) => (
-					<Sphere key={i} {...props} />
-				))}
-			</Physics>
-			{/* <Perf /> */}
-			<AsciiRenderer bgColor='transparent' fgColor='white' characters=' .+=@' />
-			{/* <EffectComposer>
-				<ASCII characters='.+=#@' fontSize={100} cellSize={30} color='#505050' />
-			</EffectComposer> */}
-		</Canvas>
+					{spheres.map((props, i) => (
+						<Sphere key={i} {...props} />
+					))}
+				</Physics>
+
+				<AsciiRenderer bgColor='transparent' fgColor='white' characters=' .+=@' />
+				{/* 
+					<EffectComposer>
+						<ASCII characters='.+=#@' fontSize={100} cellSize={30} color='#505050' />
+					</EffectComposer> 
+				*/}
+
+				{/* <Perf /> */}
+			</Canvas>
+			<Loader />
+		</>
 	)
 }

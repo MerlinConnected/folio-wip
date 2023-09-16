@@ -11,11 +11,14 @@ h2 {
 		font-size: rem(5);
 	}
 	span {
-		font-size: rem(2.65);
-		letter-spacing: rem(-0.2);
-		@media (min-width: $from-small) {
-			font-size: rem(5.5);
-			letter-spacing: rem(-0.48);
+		&.ft-alt,
+		&.ft-alt-it {
+			font-size: rem(2.65);
+			letter-spacing: rem(-0.2);
+			@media (min-width: $from-small) {
+				font-size: rem(5.5);
+				letter-spacing: rem(-0.48);
+			}
 		}
 	}
 }

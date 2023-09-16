@@ -25,7 +25,7 @@ export default function Project({ project }) {
 		visible: {
 			opacity: 1,
 			transition: {
-				delayChildren: 0.1,
+				delayChildren: 0.5,
 				staggerChildren: staggerDelay
 			}
 		}

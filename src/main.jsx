@@ -8,6 +8,8 @@ import Hero from '../components/hero'
 import Nav from '../components/nav'
 import Projects from '../components/ProjectsLayout'
 
+import { Analytics } from '@vercel/analytics/react'
+
 ReactDOM.createRoot(document.getElementById('root')).render(
 	<React.StrictMode>
 		<ReactLenis root>
@@ -24,6 +26,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 					<Scene />
 				</div>
 			</Suspense>
+			<Analytics />
 		</ReactLenis>
 	</React.StrictMode>
 )

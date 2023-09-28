@@ -220,13 +220,13 @@ th {
 	font-weight: 700;
 }
 
-#root {
-	> div {
-		&:first-child {
+#__next {
+	main {
+		.hero-container {
 			position: relative !important;
 			z-index: 1 !important;
 		}
-		&:last-child {
+		.model {
 			position: absolute !important;
 			top: 0;
 			z-index: 0 !important;

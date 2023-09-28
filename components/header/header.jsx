@@ -1,4 +1,4 @@
-import { state } from '../utils/store'
+import { state } from '../../utils/store'
 import { useSnapshot } from 'valtio'
 
 import { motion } from 'framer-motion'

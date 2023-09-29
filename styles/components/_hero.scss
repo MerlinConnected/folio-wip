@@ -1,20 +1,28 @@
 section.hero {
-	> div {
+	> h1 {
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		flex-direction: column;
 
+		width: 64vw;
+
 		margin: 0 auto;
 		> div {
-			padding-right: rem(1);
+			overflow: hidden;
 
-			&:last-child {
-				margin-top: rem(2);
-			}
-			> div {
+			padding-right: rem(0.6);
+
+			span {
 				display: inline-block;
-				margin-right: rem(1);
+				padding-right: rem(1);
+			}
+
+			&:last-of-type {
+				display: flex;
+				justify-content: space-between;
+
+				width: 100%;
 			}
 		}
 	}

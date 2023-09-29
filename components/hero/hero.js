@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import HeroAnimation from './HeroAnimation'
 
-export default function hero() {
+export default function Hero() {
 	useEffect(() => {
 		const handleScroll = () => {
 			const title = document.querySelector('.hero')

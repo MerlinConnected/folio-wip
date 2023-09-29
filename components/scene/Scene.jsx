@@ -41,6 +41,10 @@ export default function Scene() {
 
 				<Ascii />
 
+				{/* <EffectComposer>
+					<ASCII characters='.+=#@' fontSize={50} cellSize={10} color='#505050' />
+				</EffectComposer> */}
+
 				{/* <Perf /> */}
 			</Canvas>
 			<Loader />

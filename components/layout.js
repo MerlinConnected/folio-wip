@@ -1,4 +1,4 @@
-import Header from './header/header'
+import Header from './header/Header'
 import React, { Suspense } from 'react'
 
 import { ReactLenis } from '@studio-freight/react-lenis'

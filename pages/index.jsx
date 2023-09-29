@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-import Hero from '../components/hero/Hero.jsx'
+import Hero from '../components/hero/Hero'
 import Header from '../components/header/Header.jsx'
 import Projects from '../components/content/ProjectsLayout.jsx'
 import Nav from '../components/nav/Nav.jsx'

@@ -19,9 +19,9 @@ export default function Home() {
 				<Hero />
 				<Nav />
 			</div>
-			{/* <div className='projects-container'>
+			<div className='projects-container'>
 				<Projects />
-			</div> */}
+			</div>
 			<div className='model'>
 				<Scene />
 			</div>

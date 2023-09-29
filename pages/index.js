@@ -1,9 +1,9 @@
 import Head from 'next/head'
 
-import Hero from '../components/hero/Hero'
-import Header from '../components/header/Header'
+import Hero from '../components/hero/hero'
+import Header from '../components/header/header'
 import Projects from '../components/content/ProjectsLayout'
-import Nav from '../components/nav/Nav'
+import Nav from '../components/nav/nav'
 import Scene from '../components/scene/Scene'
 
 export default function Home() {

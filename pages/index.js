@@ -1,10 +1,10 @@
 import Head from 'next/head'
 
 import Hero from '../components/hero/Hero'
-import Header from '../components/header/Header.jsx'
-import Projects from '../components/content/ProjectsLayout.jsx'
-import Nav from '../components/nav/Nav.jsx'
-import Scene from '../components/scene/Scene.jsx'
+import Header from '../components/header/Header'
+import Projects from '../components/content/ProjectsLayout'
+import Nav from '../components/nav/Nav'
+import Scene from '../components/scene/Scene'
 
 export default function Home() {
 	return (

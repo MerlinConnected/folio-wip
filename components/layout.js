@@ -1,4 +1,5 @@
 import React, { Suspense } from 'react'
+import { Analytics } from '@vercel/analytics/react';
 
 import { ReactLenis } from '@studio-freight/react-lenis'
 
@@ -7,7 +8,10 @@ export default function Layout({ children }) {
 		<ReactLenis root>
 			<Suspense fallback={null}>
 				<div>
-					<main>{children}</main>
+					<main>
+						{children}
+						<Analytics />
+					</main>
 				</div>
 			</Suspense>
 		</ReactLenis>

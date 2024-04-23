@@ -5,24 +5,18 @@ section.hero {
 		justify-content: center;
 		flex-direction: column;
 
-		width: 64vw;
+		width: 70vw;
 
 		margin: 0 auto;
-		> div {
-			overflow: hidden;
 
-			padding-right: rem(0.6);
+		@media all and (max-width: $from-small) {
+			width: 90vw;
+		}
 
-			span {
-				display: inline-block;
-				padding-right: rem(1);
-			}
-
+		span {
+			display: inline-block;
 			&:last-of-type {
-				display: flex;
-				justify-content: space-between;
-
-				width: 100%;
+				margin-top: rem(1);
 			}
 		}
 	}

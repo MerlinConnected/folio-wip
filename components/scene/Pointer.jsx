@@ -1,15 +1,34 @@
 import { useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
-import { RigidBody, CuboidCollider, BallCollider } from '@react-three/rapier'
+import { RigidBody, BallCollider } from '@react-three/rapier'
+import { useEffect } from 'react'
+import { useState } from 'react'
 
 export default function Pointer({ initialPosition = { x: 0, y: 0, z: 0 } }) {
 	const ref = useRef()
-	const position = { x: initialPosition.x, y: initialPosition.y, z: initialPosition.z }
+	const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
 
-	useFrame(({ mouse, viewport }) => {
-		position.x = (mouse.x * viewport.width) / 2
-		position.y = (mouse.y * viewport.height) / 2
-		position.z = 0
+	useEffect(() => {
+		const handleMouseMove = (event) => {
+			setMousePosition({
+				x: event.clientX - window.innerWidth / 2,
+				y: event.clientY - window.innerHeight / 2
+			})
+		}
+
+		window.addEventListener('mousemove', handleMouseMove)
+
+		return () => {
+			window.removeEventListener('mousemove', handleMouseMove)
+		}
+	}, [])
+
+	useFrame(() => {
+		const position = {
+			x: mousePosition.x / 77,
+			y: -mousePosition.y / 77,
+			z: 0
+		}
 
 		ref.current?.setNextKinematicTranslation(position)
 	})

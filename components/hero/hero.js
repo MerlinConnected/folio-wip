@@ -14,29 +14,15 @@ export default function Hero() {
 		}
 	}, [])
 
-
 	return (
+		<section className='hero'>
 			<h1>
-				<div>
-					<span>3D </span>
-					<span className='ft-alt-it'>Artist.</span>
-				</div>
-				<div>
-					<span>Creative </span>
-					<span className='ft-alt-it'>developer.</span>
-				</div>
-				<div>
-					<span>I </span>
-					<span className='ft-alt'>mix</span>
-					<span className='ft-alt-it'>both</span>
-					<span>and make </span>
-					<span className='ft-alt-it'>stuff.</span>
-				</div>
-				<div>
-					<span>Bordeaux</span>
-					<span>{'->'}</span>
-					<span>Paris</span>
-				</div>
+				<span>3D Artist.</span>
+				<span>Creative developer.</span>
+				<span>I mix both and make stuff.</span>
+				<span>
+					<span>Bordeaux</span> & <span>Paris</span>
+				</span>
 			</h1>
 		</section>
 	)

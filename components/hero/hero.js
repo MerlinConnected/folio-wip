@@ -1,5 +1,4 @@
 import { useEffect } from 'react'
-import HeroAnimation from './HeroAnimation'
 
 export default function Hero() {
 	useEffect(() => {
@@ -15,10 +14,8 @@ export default function Hero() {
 		}
 	}, [])
 
-	const scope = HeroAnimation()
 
 	return (
-		<section className='hero' ref={scope}>
 			<h1>
 				<div>
 					<span>3D </span>

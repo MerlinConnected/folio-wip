@@ -31,7 +31,11 @@ export default function Scene() {
 
 	return (
 		<>
-			<Canvas shadows gl={{ alpha: true }} camera={{ position: [0, 0, 20], fov: 32.5, near: 1, far: 100 }}>
+			<Canvas
+				shadows
+				gl={{ alpha: true }}
+				camera={{ position: [0, 0, 20], fov: 32.5, near: 1, far: 100 }}
+			>
 				<color attach='background' args={['black']} />
 
 				<directionalLight intensity={0.3} position={[-10, -10, 5]} />
@@ -54,7 +58,9 @@ export default function Scene() {
 
 function Ascii() {
 	const snap = useSnapshot(state)
-	return state.debug ? null : <AsciiRenderer bgColor='transparent' fgColor='white' characters=' .+=@' />
+	return state.debug ? null : (
+		<AsciiRenderer bgColor='transparent' fgColor='white' characters=' .+=@' />
+	)
 }
 
 function PhysicsDebug() {

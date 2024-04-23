@@ -21,13 +21,6 @@ export default function Sphere({ vec = new THREE.Vector3(), scale, r = randFloat
 					.normalize()
 					.multiply({ x: -30 * delta, y: -30 * delta, z: -30 * delta })
 			)
-
-			ref.current.applyImpulse(
-				vec
-					.copy(ref.current.rotation())
-					.normalize()
-					.multiply({ x: -25 * delta, y: -25 * delta, z: -25 * delta })
-			)
 		}
 	})
 

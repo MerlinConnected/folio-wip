@@ -69,7 +69,6 @@ function PhysicsDebug() {
 		</Physics>
 	) : (
 		<Physics gravity={[0, 0, 0]}>
-			{' '}
 			<Pointer />
 			{spheres.map((props, i) => (
 				<Sphere key={i} {...props} />

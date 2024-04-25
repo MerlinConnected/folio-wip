@@ -8,7 +8,7 @@ import React, { useEffect, Suspense } from 'react'
 import Pointer from './Pointer'
 import Sphere from './Sphere'
 
-import { state } from '../../utils/store'
+import { state } from '@/utils/store'
 import { useSnapshot } from 'valtio'
 
 const spheres = [...Array(10)].map(() => ({ scale: [0.9, 1, 1.1][Math.floor(Math.random() * 3)] }))

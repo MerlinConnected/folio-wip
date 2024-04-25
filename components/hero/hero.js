@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import { state } from '@/utils/store'
 
 export default function Hero() {
 	useEffect(() => {

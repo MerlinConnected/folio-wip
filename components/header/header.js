@@ -1,4 +1,4 @@
-import { state } from '../../utils/store'
+import { state } from '@/utils/store'
 
 export default function Header() {
 	return (

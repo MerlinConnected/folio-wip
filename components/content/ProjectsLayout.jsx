@@ -1,6 +1,6 @@
 import Project from './Project'
 
-import { photorealSubway, hangingLights } from '../../utils/projects'
+import { photorealSubway, hangingLights } from '@/utils/projects'
 
 export default function Projects() {
 	return (

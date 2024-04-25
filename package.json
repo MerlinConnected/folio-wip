@@ -27,8 +27,6 @@
 		"@types/react": "^18.2.79",
 		"@types/react-dom": "^18.2.25",
 		"@types/three": "^0.163.0",
-		"@vitejs/plugin-react": "^4.2.1",
 		"r3f-perf": "^7.2.1",
-		"vite": "^5.2.10"
 	}
 }

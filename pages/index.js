@@ -5,6 +5,7 @@ import Header from '@/components/header/header'
 import Projects from '@/components/content/ProjectsLayout'
 import Nav from '@/components/nav/nav'
 import Scene from '@/components/scene/Scene'
+import GyroExample from '@/components/mobile/Gyro'
 import LoaderScreen from '@/components/content/Loader'
 
 export default function Home() {
@@ -25,6 +26,9 @@ export default function Home() {
 			</div>
 			<div className='model'>
 				<Scene />
+			</div>
+			<div className='gyro'>
+				<GyroExample />
 			</div>
 		</>
 	)

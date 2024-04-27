@@ -21,7 +21,7 @@ export default function Header() {
 				</svg>
 			</div>
 			<div style={{ overflow: 'hidden' }}>
-				<p>©2023</p>
+				<p>©2024</p>
 			</div>
 		</header>
 	)

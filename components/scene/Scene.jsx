@@ -1,9 +1,10 @@
+import React, { useEffect } from 'react'
+
 import { Canvas, useFrame } from '@react-three/fiber'
 import { Physics } from '@react-three/rapier'
-import { AsciiRenderer, Loader } from '@react-three/drei'
-import { EffectComposer, ASCII } from '@react-three/postprocessing'
+import { AsciiRenderer, useProgress } from '@react-three/drei'
+
 import { Perf } from 'r3f-perf'
-import React, { useEffect, Suspense } from 'react'
 
 import Pointer from './Pointer'
 import Sphere from './Sphere'
@@ -34,6 +35,7 @@ export default function Scene() {
 			<Canvas
 				shadows
 				gl={{ alpha: true }}
+				dpr={[0.2, 0.4]}
 				camera={{ position: [0, 0, 20], fov: 32.5, near: 1, far: 100 }}
 			>
 				<color attach='background' args={['black']} />
@@ -44,14 +46,7 @@ export default function Scene() {
 				<PhysicsDebug />
 
 				<Ascii />
-
-				{/* <EffectComposer>
-					<ASCII characters='.+=#@' fontSize={50} cellSize={10} color='#505050' />
-				</EffectComposer> */}
-
-				{/* <Perf /> */}
 			</Canvas>
-			<Loader />
 		</>
 	)
 }
@@ -66,13 +61,16 @@ function Ascii() {
 function PhysicsDebug() {
 	const snap = useSnapshot(state)
 	return state.debug ? (
-		<Physics debug gravity={[0, 0, 0]}>
-			<Pointer />
+		<>
+			<Physics debug gravity={[0, 0, 0]}>
+				<Pointer />
 
-			{spheres.map((props, i) => (
-				<Sphere key={i} {...props} />
-			))}
-		</Physics>
+				{spheres.map((props, i) => (
+					<Sphere key={i} {...props} />
+				))}
+			</Physics>
+			<Perf />
+		</>
 	) : (
 		<Physics gravity={[0, 0, 0]}>
 			<Pointer />

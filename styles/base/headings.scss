@@ -2,6 +2,11 @@ h1,
 h2 {
 	font-family: 'Albra';
 	font-variant-numeric: ordinal;
+	> div {
+		> div {
+			font-variation-settings: 'wght' var(--weight);
+		}
+	}
 	font-variation-settings: 'wght' 74;
 	font-feature-settings: 'calt' 1, 'kern' 1;
 	font-size: 3vw;
@@ -15,5 +20,14 @@ h2 {
 
 	@media all and (max-width: $from-small) {
 		font-size: rem(2);
+	}
+}
+
+h2 {
+	font-variation-settings: 'wght' 74;
+	font-size: 5vw;
+
+	@media all and (max-width: $from-small) {
+		font-size: rem(1.8);
 	}
 }

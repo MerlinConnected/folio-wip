@@ -30,6 +30,41 @@ export default function Hero() {
 	})
 
 	useEffect(() => {
+		if (titleRef.current) {
+			const split = new SplitText(titleRef.current, { type: 'chars' })
+			split.chars.forEach((char) => {
+				gsap.set(char, { '--weight': '74' })
+				char.addEventListener('mouseenter', handleHover.bind(null, char, split.chars))
+				char.addEventListener('mouseleave', handleMouseLeave.bind(null, char, split.chars))
+
+				return () => {
+					char.removeEventListener('mouseenter', handleHover)
+					char.removeEventListener('mouseleave', handleMouseLeave)
+				}
+			})
+		}
+	}, [])
+
+	const handleHover = (target, chars) => {
+		const targetIndex = chars.indexOf(target)
+		const strength = 2
+
+		chars.forEach((char, index) => {
+			const distance = Math.abs(index - targetIndex)
+			const scaleFactor = 1 / (distance + 1)
+			const newWeight = 74 + (218 - 74) * scaleFactor * strength
+
+			gsap.to(char, { '--weight': newWeight, duration: 0.2 })
+		})
+	}
+
+	const handleMouseLeave = (target, chars) => {
+		chars.forEach((char) => {
+			gsap.to(char, { '--weight': '74', duration: 0.2 })
+		})
+	}
+
+	useEffect(() => {
 		const handleScroll = () => {
 			titleSectionRef.current.style.transform = `translateY(-${window.scrollY / 2}px)`
 		}

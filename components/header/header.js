@@ -1,13 +1,50 @@
+import { useRef } from 'react'
+
 import { state } from '@/utils/store'
 
+import { useGSAP } from '@gsap/react'
+import { gsap } from 'gsap/dist/gsap'
+import { SplitText } from 'gsap/dist/SplitText'
+
+gsap.registerPlugin(useGSAP, SplitText)
+
 export default function Header() {
+	const text1Ref = useRef(null)
+	const text2Ref = useRef(null)
+	const starRef = useRef(null)
+
+	useGSAP(() => {
+		gsap.from(text1Ref.current, {
+			yPercent: -100,
+			delay: 4,
+			duration: 1,
+			ease: 'expo.out'
+		})
+
+		gsap.from(text2Ref.current, {
+			yPercent: -100,
+			delay: 4,
+			duration: 1,
+			ease: 'expo.out'
+		})
+
+		gsap.from(starRef.current, {
+			yPercent: -100,
+			rotate: 360,
+			delay: 4,
+			duration: 1,
+			ease: 'expo.out'
+		})
+	})
+
 	return (
 		<header>
 			<div style={{ overflow: 'hidden' }}>
-				<p>MERLIN</p>
+				<p ref={text1Ref}>MERLIN</p>
 			</div>
 			<div style={{ overflow: 'hidden' }}>
 				<svg
+					ref={starRef}
 					onClick={() => (state.debug = !state.debug)}
 					xmlns='http://www.w3.org/2000/svg'
 					width='16'
@@ -21,7 +58,7 @@ export default function Header() {
 				</svg>
 			</div>
 			<div style={{ overflow: 'hidden' }}>
-				<p>©2024</p>
+				<p ref={text2Ref}>©2024</p>
 			</div>
 		</header>
 	)

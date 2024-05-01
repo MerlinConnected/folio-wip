@@ -1,29 +1,36 @@
-section.hero {
-	transform: translateY(100%);
+.hero-container {
+	height: 100svh;
 
-	> h1 {
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-direction: column;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	section.hero {
+		transform: translateY(100%);
 
-		width: 70vw;
+		> h1 {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
 
-		margin: 0 auto;
+			width: 70vw;
 
-		@media all and (max-width: $from-small) {
-			width: 90vw;
-		}
+			margin: 0 auto;
 
-		> div {
-			opacity: 1;
-			transform: translateY(0);
-		}
+			@media all and (max-width: $from-small) {
+				width: 90vw;
+			}
 
-		span {
-			display: inline-block;
-			&:last-of-type {
-				margin-top: rem(1);
+			> div {
+				opacity: 1;
+				transform: translateY(0);
+			}
+
+			span {
+				display: inline-block;
+				&:last-of-type {
+					margin-top: rem(1);
+				}
 			}
 		}
 	}

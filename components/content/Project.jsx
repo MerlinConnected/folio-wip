@@ -1,4 +1,6 @@
 import Image from 'next/image'
+import Link from 'next/link'
+
 import { useAppContext } from '../context/ContextProvider'
 
 export default function Project({ project }) {
@@ -10,7 +12,9 @@ export default function Project({ project }) {
 				<div className='project'>
 					<div className='project_title'>
 						<div>
-							<h2>{project.title1}</h2>
+							<Link href={project.pageUrl}>
+								<h2>{project.title1}</h2>
+							</Link>
 						</div>
 						{!isMobile && (
 							<div className='image-container'>

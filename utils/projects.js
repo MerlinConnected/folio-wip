@@ -5,7 +5,8 @@ export const hangingLights = {
 	year: '2021',
 	client: 'Personal Project',
 	type: '3D',
-	soft: 'Blender'
+	soft: 'Blender',
+	pageUrl: '/hanging-lights'
 }
 
 export const photorealSubway = {
@@ -15,5 +16,6 @@ export const photorealSubway = {
 	year: '2020',
 	client: 'Personal Project',
 	type: '3D',
-	soft: 'Blender'
+	soft: 'Blender',
+	pageUrl: '/photoreal-subway'
 }

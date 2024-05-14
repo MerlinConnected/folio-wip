@@ -30,11 +30,11 @@ export default function Project({ project }) {
 							<h2>{project.title2}</h2>
 						</div>
 					</div>
-					{/* <div className='project_description'>
+					<div className='project_description'>
 						<p>{project.client}</p>
 						<p>{project.type}</p>
 						<p>{project.soft}</p>
-					</div> */}
+					</div>
 				</div>
 			</div>
 		</>

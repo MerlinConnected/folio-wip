@@ -8,20 +8,17 @@
 		width: 90vw;
 	}
 
-	> div {
+	.project_title {
+		flex-grow: 1;
+
 		width: 100%;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		gap: rem(2);
 		@media all and (max-width: $from-small) {
 			flex-direction: column;
 			gap: rem(1);
 		}
-	}
-
-	.project_title {
-		flex-grow: 1;
 
 		gap: rem(0.5);
 		cursor: pointer;
@@ -59,8 +56,19 @@
 		}
 	}
 	.project_description {
-		width: 100%;
-		justify-content: space-between;
-		background-color: blue;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+
+		> p {
+			&:nth-child(1) {
+				justify-self: flex-end;
+			}
+			&:nth-child(2) {
+				justify-self: center;
+			}
+			&:nth-child(3) {
+				justify-self: flex-start;
+			}
+		}
 	}
 }

@@ -5,7 +5,6 @@ import { useAppContext } from '../context/ContextProvider'
 
 export default function Project({ project }) {
 	const { isMobile } = useAppContext()
-	console.log(isMobile)
 	return (
 		<>
 			<div className='container'>

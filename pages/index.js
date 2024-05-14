@@ -14,7 +14,9 @@ export default function Home() {
 				<title>Gaëtan Jestin | Folio</title>
 				<meta name='description' content='To be written.' />
 			</Head>
+
 			<LoaderScreen />
+
 			<div className='hero-container'>
 				<Header />
 				<Hero />

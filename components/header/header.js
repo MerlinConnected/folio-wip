@@ -16,14 +16,14 @@ export default function Header() {
 	useGSAP(() => {
 		gsap.from(text1Ref.current, {
 			yPercent: -100,
-			delay: 4,
+			delay: 0.5,
 			duration: 1,
 			ease: 'expo.out'
 		})
 
 		gsap.from(text2Ref.current, {
 			yPercent: -100,
-			delay: 4,
+			delay: 0.5,
 			duration: 1,
 			ease: 'expo.out'
 		})
@@ -31,7 +31,7 @@ export default function Header() {
 		gsap.from(starRef.current, {
 			yPercent: -100,
 			rotate: 360,
-			delay: 4,
+			delay: 0.5,
 			duration: 1,
 			ease: 'expo.out'
 		})

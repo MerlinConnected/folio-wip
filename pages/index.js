@@ -1,3 +1,5 @@
+import { useState, useEffect } from 'react'
+
 import Head from 'next/head'
 
 import Hero from '@/components/hero/hero'
@@ -8,6 +10,16 @@ import Scene from '@/components/scene/Scene'
 import LoaderScreen from '@/components/content/Loader'
 
 export default function Home() {
+	const [isFirstVisit, setIsFirstVisit] = useState(true)
+
+	useEffect(() => {
+		const hasVisited = localStorage.getItem('hasVisited')
+		if (hasVisited) {
+			setIsFirstVisit(false)
+		} else {
+			localStorage.setItem('hasVisited', 'true')
+		}
+	}, [])
 	return (
 		<>
 			<Head>
@@ -15,19 +27,21 @@ export default function Home() {
 				<meta name='description' content='To be written.' />
 			</Head>
 
-			<LoaderScreen />
+			{isFirstVisit && <LoaderScreen />}
 
 			<div className='hero-container'>
 				<Header />
 				<Hero />
 				<Nav />
 			</div>
+
 			<div className='projects-container'>
 				<Projects />
 			</div>
-			<div className='model'>
+
+			{/* <div className='model'>
 				<Scene />
-			</div>
+			</div> */}
 		</>
 	)
 }

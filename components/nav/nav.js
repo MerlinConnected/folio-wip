@@ -54,7 +54,7 @@ export default function Nav() {
 	useGSAP(() => {
 		gsap.from(text1Ref.current, {
 			yPercent: 100,
-			delay: 4.5,
+			delay: 0.5,
 			// stagger: 0.05,
 			duration: 1,
 			ease: 'expo.out'
@@ -62,7 +62,7 @@ export default function Nav() {
 
 		gsap.from(text2Ref.current, {
 			yPercent: 100,
-			delay: 4.5,
+			delay: 0.5,
 			// stagger: 0.05,
 			duration: 1,
 			ease: 'expo.out'

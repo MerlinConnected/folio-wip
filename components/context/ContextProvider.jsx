@@ -1,13 +1,25 @@
 'use client'
-import { createContext, useContext } from 'react'
-
-import { useMediaQuery } from 'react-responsive'
+import { createContext, useContext, useState, useEffect } from 'react'
 
 let context = {}
 const AppContext = createContext()
 
 export const ContextProvider = ({ children }) => {
-	const isMobile = useMediaQuery({ maxWidth: 799 })
+	const [isMobile, setIsMobile] = useState(false)
+
+	useEffect(() => {
+		const handleResize = () => {
+			setIsMobile(window.innerWidth < 799)
+		}
+
+		handleResize()
+
+		window.addEventListener('resize', handleResize)
+
+		return () => {
+			window.removeEventListener('resize', handleResize)
+		}
+	}, [])
 
 	const sharedState = {
 		isMobile

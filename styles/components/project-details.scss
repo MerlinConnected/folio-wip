@@ -53,9 +53,18 @@ section.project-details {
 			}
 			.details {
 				display: grid;
-				grid-template-columns: repeat(4, 1fr);
+				grid-template-rows: repeat(4, 1fr);
+				gap: rem(0.125);
+			}
+			> p {
+				font-weight: bold;
 
-				width: 50vw;
+				&:hover {
+					cursor: none;
+				}
+			}
+			> a {
+				text-decoration: underline;
 			}
 		}
 	}

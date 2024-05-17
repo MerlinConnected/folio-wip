@@ -5,6 +5,10 @@ h2 {
 	> div {
 		> div {
 			font-variation-settings: 'wght' var(--weight);
+
+			@media all and (max-width: $from-small) {
+				font-variation-settings: 'wght' 74;
+			}
 		}
 	}
 	font-variation-settings: 'wght' 74;

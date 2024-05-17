@@ -125,13 +125,14 @@ export default function Subway() {
 	}
 	return (
 		<section className='project-details'>
-			<img
-				ref={imgRef}
-				src='/images/hanging-lights.png'
-				alt='Light bulbs handing by their wires from the ceiling'
-				className='project-image'
-			/>
-			<div ref={overlayRef} className='gradient-overlay'></div>
+			<div className='image-container'>
+				<img
+					ref={imgRef}
+					src='/images/hanging-lights.png'
+					alt='Light bulbs handing by their wires from the ceiling'
+				/>
+				<div ref={overlayRef}></div>
+			</div>
 			<div className='title-container'>
 				<div className='content'>
 					<h1 ref={titleRef}>Hanging Lights</h1>

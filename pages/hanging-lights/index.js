@@ -82,14 +82,6 @@ export default function Subway() {
 				'<'
 			)
 			.to(
-				overlayRef.current,
-				{
-					opacity: 0,
-					duration: 0.5
-				},
-				'<'
-			)
-			.to(
 				detailRef.current.querySelectorAll('p'),
 				{
 					opacity: 0,
@@ -97,6 +89,14 @@ export default function Subway() {
 					stagger: 0.1
 				},
 				'<'
+			)
+			.to(
+				overlayRef.current,
+				{
+					opacity: 0,
+					duration: 0.5
+				},
+				0.4
 			)
 			.to(
 				hideRef.current,
@@ -112,7 +112,7 @@ export default function Subway() {
 					opacity: 0,
 					duration: 0.5
 				},
-				'<'
+				0.5
 			)
 	})
 

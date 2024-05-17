@@ -60,11 +60,11 @@ export default function Project({ project }) {
 				'<'
 			)
 	})
-	const handleMouseEnter = (e) => {
+	const handleMouseEnter = () => {
 		tl.current?.play()
 	}
 
-	const handleMouseLeave = (e) => {
+	const handleMouseLeave = () => {
 		tl.current?.reverse()
 	}
 

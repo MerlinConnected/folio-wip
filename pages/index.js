@@ -39,9 +39,9 @@ export default function Home() {
 				<Projects />
 			</div>
 
-			{/* <div className='model'>
+			<div className='model'>
 				<Scene />
-			</div> */}
+			</div>
 		</>
 	)
 }

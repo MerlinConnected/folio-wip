@@ -136,7 +136,7 @@ export default function Subway() {
 			</div>
 			<div className='title-container'>
 				<div className='content'>
-					<h1 ref={titleRef}>Roof Tiles</h1>
+					<h1 ref={titleRef}>{projects[3].title1 + ' ' + projects[3].title2}</h1>
 					<div ref={detailRef} className='details'>
 						<div>
 							<p>

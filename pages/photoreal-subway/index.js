@@ -135,32 +135,32 @@ export default function Subway() {
 			</div>
 			<div className='title-container'>
 				<div className='content'>
-					<h1 ref={titleRef}>Photoreal Subway</h1>
+					<h1 ref={titleRef}>{projects[2].title1 + ' ' + projects[2].title2}</h1>
 					<div ref={detailRef} className='details'>
 						<div>
 							<p>
 								<strong>Year</strong>
 							</p>
-							<p>{projects[3].year}</p>
+							<p>{projects[2].year}</p>
 						</div>
 						<div>
 							<p>
 								<strong>Client</strong>
 							</p>
-							<p>{projects[3].client}</p>
+							<p>{projects[2].client}</p>
 						</div>
 
 						<div>
 							<p>
 								<strong>Made w/</strong>
 							</p>
-							<p>{projects[3].softs}</p>
+							<p>{projects[2].softs}</p>
 						</div>
 						<div>
 							<p>
 								<strong>Roles</strong>
 							</p>
-							<p>{projects[3].roles}</p>
+							<p>{projects[2].roles}</p>
 						</div>
 					</div>
 					<p ref={hideRef} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>

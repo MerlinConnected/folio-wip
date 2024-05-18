@@ -5,6 +5,7 @@ section.project-details {
 	flex-direction: column;
 
 	position: relative;
+
 	.image-container {
 		position: absolute;
 
@@ -39,7 +40,7 @@ section.project-details {
 
 		@media all and (max-width: $from-small) {
 			flex-direction: column;
-			justify-content: center;
+			justify-content: end;
 		}
 		.content {
 			display: flex;
@@ -51,12 +52,15 @@ section.project-details {
 
 			@media all and (max-width: $from-small) {
 				padding-left: 0;
+				width: 86vw;
+				padding-bottom: 6vw;
 			}
 			h1 {
 				font-size: rem(6);
 
 				@media all and (max-width: $from-small) {
 					font-size: rem(4);
+					text-align: left;
 				}
 			}
 			.details {

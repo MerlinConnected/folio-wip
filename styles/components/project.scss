@@ -15,7 +15,8 @@
 		align-items: center;
 		gap: rem(1);
 		@media all and (max-width: $from-small) {
-			flex-direction: column;
+			grid-template-columns: unset;
+			grid-template-rows: repeat(2, 1fr);
 		}
 		cursor: pointer;
 		> div {
@@ -27,6 +28,14 @@
 			}
 			&:nth-child(3) {
 				justify-self: flex-start;
+			}
+			@media all and (max-width: $from-small) {
+				&:nth-child(1) {
+					justify-self: center;
+				}
+				&:nth-child(3) {
+					justify-self: center;
+				}
 			}
 		}
 		.image-container {
@@ -47,6 +56,10 @@
 	.project_description {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
+
+		@media all and (max-width: $from-small) {
+			display: none;
+		}
 
 		> p {
 			&:nth-child(1) {

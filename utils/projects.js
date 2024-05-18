@@ -85,6 +85,20 @@ const webExperiments = {
 	newTab: false
 }
 
+const stolenSmile = {
+	title1: 'Stolen',
+	title2: 'Smile',
+	image: '/images/stolen-smile.png',
+	year: '2023',
+	client: 'School Project',
+	type: 'WebGL',
+	soft: 'ThreeJS',
+	softs: ['Three.js, ', 'Gsap'],
+	roles: ['Development'],
+	pageUrl: '/stolen-smile',
+	websiteURL: 'https://stolen-smile.vercel.app',
+	newTab: false
+}
 export const projects = [
 	hangingLights,
 	helmetConfigurator,
@@ -92,4 +106,6 @@ export const projects = [
 	roofTiles,
 	kairosAgency,
 	webExperiments
+	webExperiments,
+	stolenSmile,
 ]

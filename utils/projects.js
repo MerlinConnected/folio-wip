@@ -99,13 +99,29 @@ const stolenSmile = {
 	websiteURL: 'https://stolen-smile.vercel.app',
 	newTab: false
 }
+
+const albd = {
+	title1: 'A Life',
+	title2: 'By Design',
+	image: '/images/albd-scene.png',
+	year: '2024',
+	client: 'Professional Project',
+	type: 'Frontend',
+	soft: 'NextJS',
+	softs: ['Next.js, ', 'Gsap, ', 'R3F, ', 'GLSL'],
+	roles: ['Web Design, ', 'Development'],
+	pageUrl: '/a-life-by-design',
+	websiteURL: 'https://albd-scene.vercel.app',
+	newTab: false
+}
+
 export const projects = [
 	hangingLights,
 	helmetConfigurator,
 	photorealSubway,
 	roofTiles,
 	kairosAgency,
-	webExperiments
 	webExperiments,
 	stolenSmile,
+	albd
 ]

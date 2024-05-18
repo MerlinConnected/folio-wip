@@ -54,4 +54,25 @@ const roofTiles = {
 	newTab: false
 }
 
-export const projects = [hangingLights, helmetConfigurator, photorealSubway, roofTiles]
+const kairosAgency = {
+	title1: 'Kairos',
+	title2: 'Porftolio',
+	image: '/images/kairos-folio.jpeg',
+	year: '2023',
+	client: 'Professional Project',
+	type: 'Frontend',
+	soft: 'NextJS',
+	softs: ['Next.js, ', 'Gsap'],
+	roles: ['Web Design, ', '3D Design, ', 'Development'],
+	pageUrl: '/kairos-portfolio',
+	websiteURL: 'https://kairos-agency.com',
+	newTab: false
+}
+
+export const projects = [
+	hangingLights,
+	helmetConfigurator,
+	photorealSubway,
+	roofTiles,
+	kairosAgency
+]

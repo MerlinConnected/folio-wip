@@ -20,10 +20,11 @@ const helmetConfigurator = {
 	client: 'Personal Project',
 	type: 'R3F',
 	soft: 'Substance Painter',
-	softs: ['Next.js, ', 'Three.js, ', 'React-Three-Fiber'],
+	softs: ['Next.js, ', 'Three.js, ', 'React-Three-Fiber, ', 'Substance Painter'],
 	roles: ['Design, ', 'Development'],
-	pageUrl: 'https://helmet-configurator.vercel.app',
-	newTab: true
+	pageUrl: '/helmet-configurator',
+	websiteURL: 'https://helmet-configurator.vercel.app',
+	newTab: false
 }
 
 const photorealSubway = {

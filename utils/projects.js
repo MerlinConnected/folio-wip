@@ -1,6 +1,6 @@
 const hangingLights = {
 	title1: 'Hanging',
-	title2: 'Bulbs',
+	title2: 'Lights',
 	image: '/images/hanging-lights.png',
 	year: '2021',
 	client: 'Personal Project',

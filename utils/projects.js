@@ -15,7 +15,7 @@ const hangingLights = {
 const helmetConfigurator = {
 	title1: 'Helmet',
 	title2: 'Configurator',
-	image: '/images/helmet-configurator.png',
+	image: '/images/helmet-configurator.jpeg',
 	year: '2023',
 	client: 'Personal Project',
 	type: 'R3F',
@@ -30,7 +30,7 @@ const helmetConfigurator = {
 const photorealSubway = {
 	title1: 'Photoreal',
 	title2: 'Subway',
-	image: '/images/photoreal-subway.png',
+	image: '/images/photoreal-subway.jpeg',
 	year: '2020',
 	client: 'Personal Project',
 	type: '3D',
@@ -73,7 +73,7 @@ const kairosAgency = {
 const webExperiments = {
 	title1: 'Web',
 	title2: 'Experiments',
-	image: '/images/web-experiments.png',
+	image: '/images/web-experiments.jpeg',
 	year: '2023',
 	client: 'Personal Project',
 	type: 'WebGL',
@@ -88,7 +88,7 @@ const webExperiments = {
 const stolenSmile = {
 	title1: 'Stolen',
 	title2: 'Smile',
-	image: '/images/stolen-smile.png',
+	image: '/images/stolen-smile.jpeg',
 	year: '2023',
 	client: 'School Project',
 	type: 'WebGL',
@@ -103,7 +103,7 @@ const stolenSmile = {
 const albd = {
 	title1: 'A Life',
 	title2: 'By Design',
-	image: '/images/albd-scene.png',
+	image: '/images/albd-scene.jpeg',
 	year: '2024',
 	client: 'Professional Project',
 	type: 'Frontend',

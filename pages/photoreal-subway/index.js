@@ -128,7 +128,7 @@ export default function Subway() {
 			<div className='image-container'>
 				<img
 					ref={imgRef}
-					src='/images/photoreal-subway.png'
+					src='/images/photoreal-subway.jpeg'
 					alt='Light bulbs handing by their wires from the ceiling'
 				/>
 				<div ref={overlayRef}></div>

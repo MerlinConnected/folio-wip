@@ -127,7 +127,7 @@ export default function Page() {
 	return (
 		<section className='project-details'>
 			<div className='image-container'>
-				<img ref={imgRef} src='/images/stolen-smile.png' alt='Helmet Configurator' />
+				<img ref={imgRef} src='/images/stolen-smile.jpeg' alt='Helmet Configurator' />
 				<div ref={overlayRef}></div>
 			</div>
 			<div className='title-container'>

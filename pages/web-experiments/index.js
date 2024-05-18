@@ -129,7 +129,7 @@ export default function Page() {
 			<div className='image-container'>
 				<img
 					ref={imgRef}
-					src='/images/web-experiments.png'
+					src='/images/web-experiments.jpeg'
 					alt='Abtrsreact render of colorfull spheres'
 				/>
 				<div ref={overlayRef}></div>

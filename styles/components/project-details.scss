@@ -62,7 +62,10 @@ section.project-details {
 			.details {
 				display: grid;
 				grid-template-rows: repeat(4, 1fr);
-				gap: rem(0.125);
+				gap: rem(0.5);
+				strong {
+					color: #e2e2e2;
+				}
 			}
 			> p {
 				font-weight: bold;

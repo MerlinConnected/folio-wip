@@ -5,6 +5,7 @@ import { projects } from '@/utils/projects'
 import { useGSAP } from '@gsap/react'
 import { SplitText } from 'gsap/dist/SplitText'
 import { gsap } from 'gsap/dist/gsap'
+
 import Link from 'next/link'
 
 gsap.registerPlugin(useGSAP, SplitText)
@@ -128,14 +129,14 @@ export default function Subway() {
 			<div className='image-container'>
 				<img
 					ref={imgRef}
-					src='/images/hanging-lights.png'
+					src='/images/roof-tiles.jpg'
 					alt='Light bulbs handing by their wires from the ceiling'
 				/>
 				<div ref={overlayRef}></div>
 			</div>
 			<div className='title-container'>
 				<div className='content'>
-					<h1 ref={titleRef}>Hanging Lights</h1>
+					<h1 ref={titleRef}>Roof Tiles</h1>
 					<div ref={detailRef} className='details'>
 						<div>
 							<p>
@@ -149,7 +150,6 @@ export default function Subway() {
 							</p>
 							<p>{projects[3].client}</p>
 						</div>
-
 						<div>
 							<p>
 								<strong>Made w/</strong>

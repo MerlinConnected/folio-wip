@@ -6,6 +6,8 @@ const hangingLights = {
 	client: 'Personal Project',
 	type: '3D',
 	soft: 'Blender',
+	softs: ['Blender, ', 'Substance Painter'],
+	roles: ['Modeling, ', 'Texturing, ', 'Lighting'],
 	pageUrl: '/hanging-lights',
 	newTab: false
 }
@@ -18,6 +20,8 @@ const helmetConfigurator = {
 	client: 'Personal Project',
 	type: 'R3F',
 	soft: 'Substance Painter',
+	softs: ['Next.js, ', 'Three.js, ', 'React-Three-Fiber'],
+	roles: ['Design, ', 'Development'],
 	pageUrl: 'https://helmet-configurator.vercel.app',
 	newTab: true
 }
@@ -30,6 +34,8 @@ const photorealSubway = {
 	client: 'Personal Project',
 	type: '3D',
 	soft: 'Blender',
+	softs: ['Blender, ', 'Substance Painter'],
+	roles: ['Modeling, ', 'Texturing, ', 'Lighting'],
 	pageUrl: '/photoreal-subway',
 	newTab: false
 }
@@ -42,6 +48,8 @@ const roofTiles = {
 	client: 'Personal Project',
 	type: '3D',
 	soft: 'Blender',
+	softs: ['Blender, ', 'Substance Painter'],
+	roles: ['Modeling, ', 'Texturing, ', 'Lighting'],
 	pageUrl: '/roof-tiles',
 	newTab: false
 }

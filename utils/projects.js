@@ -70,10 +70,26 @@ const kairosAgency = {
 	newTab: false
 }
 
+const webExperiments = {
+	title1: 'Web',
+	title2: 'Experiments',
+	image: '/images/web-experiments.png',
+	year: '2023',
+	client: 'Personal Project',
+	type: 'WebGL',
+	soft: 'ThreeJS',
+	softs: ['Next.js, ', 'Gsap'],
+	roles: ['Web Design, ', 'Development'],
+	pageUrl: '/web-experiments',
+	websiteURLs: ['https://react-three-peaches.vercel.app', 'https://react-three-peaches.vercel.app'],
+	newTab: false
+}
+
 export const projects = [
 	hangingLights,
 	helmetConfigurator,
 	photorealSubway,
 	roofTiles,
-	kairosAgency
+	kairosAgency,
+	webExperiments
 ]
